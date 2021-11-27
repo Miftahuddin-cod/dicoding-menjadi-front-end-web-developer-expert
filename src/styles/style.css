@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+/* genaral */
+
+a {
+    text-decoration: none;
+    line-height: 44px;
+}
+
+a, button {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.container {
+    padding: 1rem;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #f44336;
+    width: 5rem;
+    height: 5rem;
+    margin: 5rem 0;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* SkipLink */
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* header */
+
+header {
+    box-shadow: 0px 1px 0px 0px #00000033;
+}
+
+/* Navbar */
+
+#navbar {
+    display: flex;
+    font-family: "Nunito", sans-serif;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#navbar .nav {
+    display: none;
+}
+
+.nav .nav-link {
+    padding: 14px 16px;
+    font-weight: bold;
+    color: #8e8e8e;
+    text-decoration: none;
+}
+
+.nav .nav-link:hover {
+    color: #000000;
+}
+
+/* Sidebar */
+
+#sidebar .nav {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    height: 100%;
+    width: 0;
+    box-shadow: 1px 0px 0px #00000042;
+    top: 0;
+    left: 0;
+    padding-top: 5%;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+#sidebar .nav .nav-link {
+    display: block;
+    transition: 0.3s;
+}
+
+#menu-button, #close-button {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+#close-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+#sidebar .open {
+    width: 70%;
+}
+
+/* Hero */
+
+#hero {
+    display: grid;
+    width: 100%;
+    min-height: 380px;
+    background: linear-gradient( 0deg, rgb( 0 0 0 / 50%), rgb( 0 0 0 / 50%)), url(/images/heros/hero-image_2-small.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero .hero-content {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#hero .hero-content .hero-welcome {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#hero .hero-content .hero-title {
+    color: white;
+    font-size: 60px;
+    margin: 0.5rem 0;
+    font-family: initial;
+}
+
+#hero .hero-content .hero-tag {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    font-family: initial;
+}
+
+/* MainContent */
+
+#main-content .content-title {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 2.5rem;
+}
+
+/* post item */
+
+.post-item .post-title {
+    font-family: "Nunito", sans-serif;
+    text-transform: uppercase;
+}
+
+.post-item .post-title a {
+    color: #000000;
+    display: block;
+}
+
+.post-item .post-title a:hover {
+    color: #eb0505;
+}
+
+.post-item .post-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.post-item .post-header i {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    margin-right: .25rem;
+    line-height: 1rem;
+}
+
+.post-item .post-header .fa-map-marker-alt {
+    color: #da190b;
+}
+
+.post-item .post-header .fa-star {
+    color: #ecd900;
+}
+
+/* list restaurant */
+
+.detail-review, .menus, .post-list {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.post-list .post-item {
+    box-shadow: 0 4px 8px 0 rgba( 0, 0, 0, 0.2);
+    margin: 0rem 0rem 2rem;
+}
+
+.post-list .post-item .post-title {
+    margin-bottom: 10px;
+}
+
+.post-list .post-item .post-description {
+    margin: 10px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+}
+
+/* Detail Restaurant */
+
+.restaurant .post-thumbnail img {
+    border-radius: 5px;
+}
+
+.restaurant .post-item .post-title {
+    font-size: 2rem;
+}
+
+.restaurant .post-item .post-description {
+    text-align: justify;
+}
+
+.detail-review .detail-review-item {
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 0px 3px 1px #00000047;
+}
+
+.detail-review-item .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.detail-review-item .review-header i {
+    font-size: 2rem;
+    margin-right: .5rem;
+    color: #7f7a7a85;
+}
+
+.detail-review-item .review-header .review-name {
+    font-weight: bold;
+}
+
+.detail-review-item .review-header .review-date {
+    font-size: 13px;
+}
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+
+#footer {
+    padding: 1.5rem;
+    display: flex;
+    font-family: "Nunito", sans-serif;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -1px 0px 0px #00000033;
+    font-weight: bold;
+}
