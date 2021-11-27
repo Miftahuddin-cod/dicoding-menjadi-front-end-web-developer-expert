@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+#navbar {
+    padding: 1rem;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 0px 0px #00000033;
+}
+
+#navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar .nav {
+    display: none;
+}
+
+.nav .nav-link {
+    padding: 14px 16px;
+    font-weight: bold;
+    color: #8e8e8e;
+    text-decoration: none;
+}
+
+.nav .nav-link:hover {
+    color: #000000;
+}
+
+#sidebar .nav {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    height: 100%;
+    width: 0;
+    box-shadow: 1px 0px 0px #00000042;
+    top: 0;
+    left: 0;
+    padding-top: 5%;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+#sidebar .nav .nav-link {
+    display: block;
+    transition: 0.3s;
+}
+
+#menu-button,
+#close-button {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+#close-button {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+
+#hero {
+    display: grid;
+    width: 100%;
+    min-height: 380px;
+    background: linear-gradient(0deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(../public/images/heros/hero-image_2.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero .hero-content {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#hero .hero-content .hero-welcome {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#hero .hero-content .hero-title {
+    color: white;
+    font-size: 60px;
+    margin: .5rem 0;
+    font-family: initial;
+}
+
+#hero .hero-content .hero-tag {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    font-family: initial;
+}
+
+#main-content {
+    padding: 1rem;
+}
+
+#main-content .content-title {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 2.5rem;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.post-list .post-item {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    ;
+    margin: 0rem 0rem 2rem;
+}
+
+.post-item .post-content {
+    padding: 1rem;
+}
+
+.post-item .post-title {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.post-item .post-title a {
+    color: #000000;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+}
+
+.post-item .post-title a:hover {
+    color: #eb0505;
+}
+
+.post-item .post-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.post-item .post-header .fa-map-marker-alt {
+    color: #da190b;
+}
+
+.post-item .post-header .fa-star {
+    color: #ecd900;
+}
+
+.post-item .post-description {
+    margin: 0 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#footer {
+    padding: 1.5rem;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -1px 0px 0px #00000033;
+    font-weight: bold;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    #menu-button,
+    #close-button {
+        display: none;
+    }
+
+    #navbar .nav {
+        display: block;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .post-list .post-item {
+        margin: 0rem 1rem 2rem;
+    }
+
+    .post-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .post-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #navbar,
+    #main-content {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
