@@ -1,0 +1,34 @@
+{
+  "name": "submission2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint ./src"
+  },
+  "author": "Miftahuddin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^6.4.1",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.30.0",
+    "eslint-config-google": "^0.14.0",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^1.3.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "idb": "^6.1.2",
+    "regenerator-runtime": "^0.13.7",
+    "serviceworker-webpack-plugin": "^1.0.1"
+  }
+}

@@ -1,0 +1,36 @@
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    #menu-button, #close-button {
+        display: none;
+    }
+    #navbar .nav {
+        display: block;
+    }
+    #sidebar {
+        display: none;
+    }
+
+    .detail-review,
+    .menus,
+    .post-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .detail-review,
+    .post-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .post-detail .post-thumbnail img {
+        height: 500px;
+    }
+}
