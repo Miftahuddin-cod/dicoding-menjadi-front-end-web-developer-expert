@@ -22,4 +22,5 @@ npm run start-dev
 ### Build
 ```
 npm run build
+npm run build-image
 ```
